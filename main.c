@@ -7,10 +7,10 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-int	extract_message(char **buf, char **msg)
+int extract_message(char **buf, char **msg)
 {
 	char	*newbuf;
-	int		i;
+	int	i;
 
 	*msg = 0;
 	if (*buf == 0)
@@ -34,7 +34,7 @@ int	extract_message(char **buf, char **msg)
 	return (0);
 }
 
-char	*str_join(char *buf, char *add)
+char *str_join(char *buf, char *add)
 {
 	char	*newbuf;
 	int		len;
@@ -54,10 +54,10 @@ char	*str_join(char *buf, char *add)
 	return (newbuf);
 }
 
-int	main(void)
-{
-	int					sockfd, connfd, len;
-	struct	sockaddr_in servaddr, cli; 
+
+int main() {
+	int sockfd, connfd, len;
+	struct sockaddr_in servaddr, cli; 
 
 	// socket create and verification 
 	sockfd = socket(AF_INET, SOCK_STREAM, 0); 
